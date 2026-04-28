@@ -43,3 +43,10 @@ The project follows a modular architecture to ensure code reusability:
    PORT=5000
    DATABASE_URL=your_postgres_url
    JWT_SECRET=your_secure_secret_key
+
+## 🔗 Project Links
+| Component | Status | Platform | Link |
+| :--- | :--- | :--- | :--- |
+| **Frontend** | 🟢 Live | Vercel | [Visit UI](https://syncro-task-saa-s.vercel.app) |
+| **Backend** | 🟢 Live | Render | [View API](https://syncrotask-saas.onrender.com) |
+| **Database** | 🟢 Connected | Render PostgreSQL | *Managed Cloud Instance* |
