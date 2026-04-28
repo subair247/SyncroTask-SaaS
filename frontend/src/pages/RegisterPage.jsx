@@ -10,7 +10,7 @@ const RegisterPage = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/auth/register', { email, password });
+            await axios.post('https://syncrotask-saas.onrender.com/api/auth/register', { email, password });
             alert("Registration Successful! Now please login.");
             navigate('/login');
         } catch (err) {

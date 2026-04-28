@@ -11,7 +11,7 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             // 1. Send login request to backend
-            const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const res = await axios.post('https://syncrotask-saas.onrender.com/api/auth/login', { email, password });
 
             // 2. CRITICAL: Save the token and email to browser memory
             localStorage.setItem('token', res.data.token);

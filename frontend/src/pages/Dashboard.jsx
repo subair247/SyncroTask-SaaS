@@ -19,7 +19,7 @@ const Dashboard = () => {
 
     const fetchTasks = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/tasks', {
+            const res = await axios.get('https://syncrotask-saas.onrender.com/api/tasks', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setTasks(res.data);
@@ -32,7 +32,7 @@ const Dashboard = () => {
         e.preventDefault();
         if (!taskTitle.trim()) return;
         try {
-            await axios.post('http://localhost:5000/api/tasks', 
+            await axios.post('https://syncrotask-saas.onrender.com/api/tasks', 
                 { title: taskTitle }, 
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     const toggleComplete = async (id) => {
         try {
-            await axios.put(`http://localhost:5000/api/tasks/${id}`, {}, {
+            await axios.put(`https://syncrotask-saas.onrender.com/api/tasks/${id}`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchTasks();
@@ -57,7 +57,7 @@ const Dashboard = () => {
     const deleteTask = async (id) => {
         if (!window.confirm("Delete this task?")) return;
         try {
-            await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
+            await axios.delete(`https://syncrotask-saas.onrender.com/api/tasks/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchTasks();
