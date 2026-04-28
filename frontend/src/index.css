@@ -1,0 +1,30 @@
+/* Standard Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Human Touches */
+body {
+  @apply bg-gray-50 text-gray-900;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom transition for all buttons and inputs */
+button, input {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Custom scrollbar to look like a modern SaaS */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-gray-400;
+}
